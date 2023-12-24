@@ -8,10 +8,34 @@ This is a modular system of Arduino-based switch controllers for metrology.
 
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-arduino-uno-shield/eagle-screenshot.png)
 
+ - [switchotron-arduino-uno-shield-v1.brd](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-arduino-uno-shield/switchotron-arduino-uno-shield-v1.brd)
+ - [switchotron-arduino-uno-shield-v1.sch](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-arduino-uno-shield/switchotron-arduino-uno-shield-v1.sch)
+ - [switchotron-arduino-uno-shield-v1-gerbers.zip](https://github.com/LafeLabs/switchotron/raw/main/switchotron-arduino-uno-shield/switchotron-arduino-uno-shield-v1-gerbers.zip)
+ - [Audio Jack part link on Digikey](https://www.digikey.com/en/products/detail/cui-devices/MJ-3536N/281264)
+ - [10 uF SMT capacitor in 0603 package link on Digikey](https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10A106MP8NNNC/3887529)
+ - [1000 uF electrolytic capacitor link on Digikey](https://www.digikey.com/en/products/detail/rubycon/35PX1000MEFC10X20/3563769)
+ - [300 Ohm SMT resistor in 0603 package link on Digikey](https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT300R/1760765)
+ - [1 megaohm SMT resistor in 0603 package link on digikey](https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERJ-3EKF1004V/196033)
+ - [10 kiloohm potentiometer Digikey link](https://www.digikey.com/en/products/detail/bourns-inc/PTV09A-4225F-B103/3781155)
+ - [Switch link on digikey](https://www.digikey.com/en/products/detail/nkk-switches/B13AP/379100)
+ - [rainbow colored Male 0.1" header pin kit from Digikey/Adafruit](https://www.digikey.com/en/products/detail/adafruit-industries-llc/4154/10123805)
+ - [SAMTEC IDSS-05-D-03.00 5 pin cable](https://www.samtec.com/products/idss-05-d-03.00)
+ - [SAMTEC IDSS-10-D-03.00 10 pin cable](https://www.samtec.com/products/idss-10-d-03.00)
+ - [SAMTEC datasheet](https://www.mouser.com/datasheet/2/527/idmd-2508302.pdf)
+
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-3buttons-3lights/eagle-screenshot.png)
 
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-relayboard/eagle-screenshot.png)
 
+![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/arduino-board-mechanical-drawing.png)
+
+![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/arduino-uno-photo-holes.png)
+
+![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/uno-hole-dimensions.svg)
+
+![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/hexnuts.png)
+
+![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/screw.png)
 
 
  - [4-40 brass hex nuts](https://www.mcmaster.com/92671A005/)
