@@ -12,6 +12,8 @@ This is a modular system of Arduino-based switch controllers for metrology.
 
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-arduino-uno-shield/eagle-screenshot.png)
 
+![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-arduino-uno-shield/eagle-screenshot-schematic.png)
+
 
 ### EAGLE FILES
 
