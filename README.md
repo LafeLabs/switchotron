@@ -1,4 +1,4 @@
-# switchotron
+# [SWITCHOTRON](https://github.com/lafelabs/switchotron/)
 
 This is a modular system of Arduino-based switch controllers for metrology.
 
@@ -9,6 +9,8 @@ This is a modular system of Arduino-based switch controllers for metrology.
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/laser-cutout-pattern.svg)
 
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/laser-cutout-pattern-circleholes.svg)
+
+# UNO SHIELD BOARD
 
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-arduino-uno-shield/eagle-screenshot.png)
 
@@ -38,7 +40,12 @@ This is a modular system of Arduino-based switch controllers for metrology.
  - [SAMTEC IDSS-10-D-03.00 10 pin cable](https://www.samtec.com/products/idss-10-d-03.00)
  - [SAMTEC datasheet](https://www.mouser.com/datasheet/2/527/idmd-2508302.pdf)
 
+
+# 3 BUTTONS 3 LIGHTS BOARD
+
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-3buttons-3lights/eagle-screenshot.png)
+
+![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-3buttons-3lights/eagle-screenshot-schematic.png)
 
 #### EAGLE FILES
 
@@ -51,14 +58,17 @@ This is a modular system of Arduino-based switch controllers for metrology.
 
 ###  PARTS LINKS
 
- - [WS2811 LED NEOPIXELS]()
- - [10 uF Capacitors]()
- - [10 k resistors]()
- - [buttons]()
- - [headers]()
+ - [WS2811 LED NEOPIXELS](https://www.digikey.com/en/products/detail/adafruit-industries-llc/4957/14113519)
+ - [10 uF Capacitors](https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10A106MP8NNNC/3887529)
+ - [10 k resistors](https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT10K0/1761235)
+ - [buttons](https://www.digikey.com/en/products/detail/e-switch/TL59AF100Q/1144803)
+ - [headers](https://www.digikey.com/en/products/detail/adafruit-industries-llc/4154/10123805)
 
+# RELAY BOARD
 
-![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-relayboard/eagle-screenshot.png)
+![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-relayboard/eagle-screenshot.png) 
+
+![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-relayboard/eagle-screenshot-schematic.png)
 
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/arduino-board-mechanical-drawing.png)
 
