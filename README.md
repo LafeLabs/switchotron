@@ -8,9 +8,18 @@ This is a modular system of Arduino-based switch controllers for metrology.
 
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-arduino-uno-shield/eagle-screenshot.png)
 
+
+### EAGLE FILES
+
  - [switchotron-arduino-uno-shield-v1.brd](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-arduino-uno-shield/switchotron-arduino-uno-shield-v1.brd)
  - [switchotron-arduino-uno-shield-v1.sch](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-arduino-uno-shield/switchotron-arduino-uno-shield-v1.sch)
+
+### GERBER FILES
+
  - [switchotron-arduino-uno-shield-v1-gerbers.zip](https://github.com/LafeLabs/switchotron/raw/main/switchotron-arduino-uno-shield/switchotron-arduino-uno-shield-v1-gerbers.zip)
+
+### PART LINKS
+
  - [Audio Jack part link on Digikey](https://www.digikey.com/en/products/detail/cui-devices/MJ-3536N/281264)
  - [10 uF SMT capacitor in 0603 package link on Digikey](https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10A106MP8NNNC/3887529)
  - [1000 uF electrolytic capacitor link on Digikey](https://www.digikey.com/en/products/detail/rubycon/35PX1000MEFC10X20/3563769)
@@ -24,6 +33,11 @@ This is a modular system of Arduino-based switch controllers for metrology.
  - [SAMTEC datasheet](https://www.mouser.com/datasheet/2/527/idmd-2508302.pdf)
 
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-3buttons-3lights/eagle-screenshot.png)
+
+### EAGLE FILES
+
+ - []()
+
 
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-relayboard/eagle-screenshot.png)
 
