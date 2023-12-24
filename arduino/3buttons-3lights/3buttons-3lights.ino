@@ -1,22 +1,10 @@
-# switchotron
-
-This is a modular system of Arduino-based switch controllers for metrology.
-
-![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/panels/cardboard-photo.png)
-
-![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/panels/square-front-1.svg)
-
-![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-arduino-uno-shield/eagle-screenshot.png)
-
-![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-3buttons-3lights/eagle-screenshot.png)
-
-![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-relayboard/eagle-screenshot.png)
-
-```
-
+// NeoPixel Ring simple sketch (c) 2013 Shae Erisson
+// Released under the GPLv3 license to match the rest of the
+// Adafruit NeoPixel library
 
 #include <Adafruit_NeoPixel.h>
 #ifdef __AVR__
+ #include <avr/power.h> // Required for 16 MHz Adafruit Trinket
 #endif
 
 // Which pin on the Arduino is connected to the NeoPixels?
@@ -31,6 +19,7 @@ This is a modular system of Arduino-based switch controllers for metrology.
 // strandtest example for more information on possible values.
 Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
+#define DELAYVAL 500 // Time (in milliseconds) to pause between pixels
 
 int analog = 0;
 int delta = 100;
@@ -47,7 +36,6 @@ void setup() {
   // END of Trinket-specific code.
 
   pixels.begin(); // INITIALIZE NeoPixel strip object (REQUIRED)
-
 }
 
 void loop() {
@@ -102,4 +90,3 @@ void loop() {
     Serial.println(analog);
 
 }
-```
