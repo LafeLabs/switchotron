@@ -12,6 +12,12 @@ This is a modular system of Arduino-based switch controllers for metrology.
 
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-relayboard/eagle-screenshot.png)
 
+
+
+ - [4-40 brass hex nuts](https://www.mcmaster.com/92671A005/)
+ - [4-40 3/8" long brass pan head Phillips screws](https://www.mcmaster.com/94070A108/)
+
+
 ```
 
 
