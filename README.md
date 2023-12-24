@@ -34,9 +34,22 @@ This is a modular system of Arduino-based switch controllers for metrology.
 
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-3buttons-3lights/eagle-screenshot.png)
 
-### EAGLE FILES
+#### EAGLE FILES
 
- - []()
+ - [switchotron-3buttons-3lights-v1.brd](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-3buttons-3lights/switchotron-3buttons-3lights-v1.brd)
+ - [switchotron-3buttons-3lights-v1.sch](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-3buttons-3lights/switchotron-3buttons-3lights-v1.sch)
+
+### GERBER FILES
+
+ - [switchotron-3buttons-3lights-v1-gerbers.zip](https://github.com/LafeLabs/switchotron/raw/main/switchotron-3buttons-3lights/switchotron-3buttons-3lights-v1-gerbers.zip)
+
+###  PARTS LINKS
+
+ - [WS2811 LED NEOPIXELS]()
+ - [10 uF Capacitors]()
+ - [10 k resistors]()
+ - [buttons]()
+ - [headers]()
 
 
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-relayboard/eagle-screenshot.png)
