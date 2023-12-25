@@ -1,5 +1,10 @@
 # [SWITCHOTRON](https://github.com/lafelabs/switchotron/)
 
+![qr code pointing to github repository](https://raw.githubusercontent.com/LafeLabs/switchotron/main/qrcode.png)
+
+![a whole page of qr codes to print out](https://raw.githubusercontent.com/LafeLabs/switchotron/main/qrcode-page.png)
+
+
 This is a modular system of Arduino-based switch controllers for metrology.
 
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/panels/cardboard-photo.png)
@@ -9,6 +14,9 @@ This is a modular system of Arduino-based switch controllers for metrology.
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/laser-cutout-pattern.svg)
 
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/laser-cutout-pattern-circleholes.svg)
+
+
+![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/laser-cutout-pattern-roundcorners.svg)
 
 # UNO SHIELD BOARD
 
@@ -69,6 +77,21 @@ This is a modular system of Arduino-based switch controllers for metrology.
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-relayboard/eagle-screenshot.png) 
 
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-relayboard/eagle-screenshot-schematic.png)
+
+### EAGLE FILES
+
+ - [switchotron-relayboard-v1.brd](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-relayboard/switchotron-relayboard-v1.brd)
+ - [switchotron-relayboard-v1.sch](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-relayboard/switchotron-relayboard-v1.sch)
+
+### GERBER FILES
+
+ - [switchotron-relayboard-v1-gerbers.zip](https://github.com/LafeLabs/switchotron/raw/main/switchotron-3buttons-3lights/switchotron-relayboard-v1-gerbers.zip)
+
+### PARTS LINKS
+
+ - [Audio Jack part link on Digikey](https://www.digikey.com/en/products/detail/cui-devices/MJ-3536N/281264)
+ - [headers](https://www.digikey.com/en/products/detail/adafruit-industries-llc/4154/10123805)
+ - [relays](https://www.digikey.com/en/products/detail/comus-international/3570-1331-051/7497098)
 
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/arduino-board-mechanical-drawing.png)
 
