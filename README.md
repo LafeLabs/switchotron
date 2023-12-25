@@ -1,5 +1,7 @@
 # [SWITCHOTRON](https://github.com/lafelabs/switchotron/)
 
+### [localhost](http://localhost/)
+
 ![qr code pointing to github repository](https://raw.githubusercontent.com/LafeLabs/switchotron/main/qrcode.png)
 
 ![a whole page of qr codes to print out](https://raw.githubusercontent.com/LafeLabs/switchotron/main/qrcode-page.png)
@@ -11,12 +13,7 @@ This is a modular system of Arduino-based switch controllers for metrology.  The
 
 ![pattern laid out in geometron of main square](https://raw.githubusercontent.com/LafeLabs/switchotron/main/panels/square-front-1.svg)
 
-![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/laser-cutout-pattern.svg)
 
-![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/laser-cutout-pattern-circleholes.svg)
-
-
-![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/laser-cutout-pattern-roundcorners.svg)
 
 # UNO SHIELD BOARD
 
@@ -93,11 +90,37 @@ This is a modular system of Arduino-based switch controllers for metrology.  The
  - [headers](https://www.digikey.com/en/products/detail/adafruit-industries-llc/4154/10123805)
  - [relays](https://www.digikey.com/en/products/detail/comus-international/3570-1331-051/7497098)
 
+
+#### LASER CUTOUTS AND DIMENSIONS
+
+CUT ALL SQUARES OUT 10 INCHES ON A SIDE:
+
+![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/laser-cutout-pattern.svg)
+
+![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/laser-cutout-pattern-circleholes.svg)
+
+![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/laser-cutout-pattern-roundcorners.svg)
+
+![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/menorah.svg)
+
+CUT THIS OUT 19X7 INCHES:
+
+![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/rack-mems-6portcal.svg)
+
+ADD OR MODIFY HOLE POSITIONS AS NEEDED FOR BOARD WHICH ADAPTS TO FRIDGE CABLE.  
+
+### ARDUINO BOARD DIMENSIONS AND HOLE LAYOUTS
+
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/arduino-board-mechanical-drawing.png)
+
+![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/uno-hole-dimensions.svg)
 
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/arduino-uno-photo-holes.png)
 
-![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/uno-hole-dimensions.svg)
+
+
+
+### FASTENERS FROM MCMASTER CARR
 
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/hexnuts.png)
 
@@ -107,6 +130,9 @@ This is a modular system of Arduino-based switch controllers for metrology.  The
  - [4-40 brass hex nuts](https://www.mcmaster.com/92671A005/)
  - [4-40 3/8" long brass pan head Phillips screws](https://www.mcmaster.com/94070A108/)
 
+
+
+# ARDUINO CODE(VERY IN PROGRESS)
 
 ```
 
