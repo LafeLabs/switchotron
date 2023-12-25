@@ -5,11 +5,11 @@
 ![a whole page of qr codes to print out](https://raw.githubusercontent.com/LafeLabs/switchotron/main/qrcode-page.png)
 
 
-This is a modular system of Arduino-based switch controllers for metrology.
+This is a modular system of Arduino-based switch controllers for metrology.  The relay board is laid out on a 10 inch by 10 inch square, cut from acrylic or wood on a laser cutter or with a saw and drill.  
 
-![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/panels/cardboard-photo.png)
+![photo of cardboard model of system](https://raw.githubusercontent.com/LafeLabs/switchotron/main/panels/cardboard-photo.png)
 
-![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/panels/square-front-1.svg)
+![pattern laid out in geometron of main square](https://raw.githubusercontent.com/LafeLabs/switchotron/main/panels/square-front-1.svg)
 
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/laser-cutout-pattern.svg)
 
