@@ -105,7 +105,7 @@ CUT ALL SQUARES OUT 10 INCHES ON A SIDE:
 
 CUT THIS OUT 19X7 INCHES:
 
-![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/rack-mems-6portcal.svg)
+![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/mechanicals/laser-cut-mems-driver.svg)
 
 ADD OR MODIFY HOLE POSITIONS AS NEEDED FOR BOARD WHICH ADAPTS TO FRIDGE CABLE.  
 
