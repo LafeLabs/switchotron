@@ -50,22 +50,28 @@ This is a modular system of Arduino-based switch controllers for metrology.  The
 
 # 3 BUTTONS 3 LIGHTS BOARD
 
-![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-3buttons-3lights/eagle-screenshot.png)
+This board turned out to have the WS2811 pad on the first version, which is wrong!  The neopixel boards are all now the WS2812B.  
 
-![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-3buttons-3lights/eagle-screenshot-schematic.png)
+![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-3buttons-3lights/eagle-board-screenshot-v2.png)
+
+![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-3buttons-3lights/eagle-schematic-v2.png)
+
+here is the version 1 board showing how the neopixel doesn't fit:
+
+![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-3buttons-3lights/photo-old-new-boards.png)
 
 #### EAGLE FILES
 
- - [switchotron-3buttons-3lights-v1.brd](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-3buttons-3lights/switchotron-3buttons-3lights-v1.brd)
- - [switchotron-3buttons-3lights-v1.sch](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-3buttons-3lights/switchotron-3buttons-3lights-v1.sch)
+ - [switchotron-3buttons-3lights-v2.brd](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-3buttons-3lights/switchotron-3buttons-3lights-v2.brd)
+ - [switchotron-3buttons-3lights-v2.sch](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-3buttons-3lights/switchotron-3buttons-3lights-v2.sch)
 
 ### GERBER FILES
 
- - [switchotron-3buttons-3lights-v1-gerbers.zip](https://github.com/LafeLabs/switchotron/raw/main/switchotron-3buttons-3lights/switchotron-3buttons-3lights-v1-gerbers.zip)
+ - [switchotron-3buttons-3lights-v2-gerbers.zip](https://github.com/LafeLabs/switchotron/raw/main/switchotron-3buttons-3lights/switchotron-3buttons-3lights-v2-gerbers.zip)
 
 ###  PARTS LINKS
 
- - [WS2811 LED NEOPIXELS](https://www.digikey.com/en/products/detail/adafruit-industries-llc/4957/14113519)
+ - [WS2812B LED NEOPIXELS](https://www.digikey.com/en/products/detail/sparkfun-electronics/COM-16347/11630204)
  - [10 uF Capacitors](https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10A106MP8NNNC/3887529)
  - [10 k resistors](https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT10K0/1761235)
  - [buttons](https://www.digikey.com/en/products/detail/e-switch/TL59AF100Q/1144803)
