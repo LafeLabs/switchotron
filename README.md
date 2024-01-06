@@ -60,6 +60,10 @@ here is the version 1 board showing how the neopixel doesn't fit:
 
 ![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-3buttons-3lights/photo-old-new-boards.png)
 
+WS2812 layout and pins:
+
+![](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-3buttons-3lights/WS2812B-datasheet-screenshot.png)
+
 #### EAGLE FILES
 
  - [switchotron-3buttons-3lights-v2.brd](https://raw.githubusercontent.com/LafeLabs/switchotron/main/switchotron-3buttons-3lights/switchotron-3buttons-3lights-v2.brd)
