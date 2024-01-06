@@ -2,6 +2,8 @@
 
 ### [localhost](http://localhost/)
 
+The switch as sign, using GEOMETRON.
+
 ![qr code pointing to github repository](https://raw.githubusercontent.com/LafeLabs/switchotron/main/qrcode.png)
 
 ![a whole page of qr codes to print out](https://raw.githubusercontent.com/LafeLabs/switchotron/main/qrcode-page.png)

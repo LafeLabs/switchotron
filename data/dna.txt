@@ -1,6 +1,7 @@
 {
     "html": [
         "README.md",
+        "fork.html",
         "index.html",
         "readme.html",
         "readmeeditor.html",
