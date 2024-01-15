@@ -144,17 +144,19 @@ ADD OR MODIFY HOLE POSITIONS AS NEEDED FOR BOARD WHICH ADAPTS TO FRIDGE CABLE.
 
 
 
-# ARDUINO CODE(VERY IN PROGRESS)
+
+# ARDUINO CODE TO SWITCH BETWEEN THREE RELAY STATES
+
+BUTTONS ARE 1,2,3 FROM LEFT TO RIGHT, AND ARE RED, GREEN, THEN BLUE LIGHTS.  
 
 ```
-
 
 #include <Adafruit_NeoPixel.h>
 #ifdef __AVR__
 #endif
 
 // Which pin on the Arduino is connected to the NeoPixels?
-#define PIN        6 // On Trinket or Gemma, suggest changing this to 1
+#define PIN        12 // On Trinket or Gemma, suggest changing this to 1
 
 // How many NeoPixels are attached to the Arduino?
 #define NUMPIXELS 3 // Popular NeoPixel ring size
@@ -180,6 +182,14 @@ void setup() {
 #endif
   // END of Trinket-specific code.
 
+    pinMode(3,OUTPUT);
+    pinMode(4,OUTPUT);
+    pinMode(5,OUTPUT);
+    digitalWrite(3,HIGH);
+    digitalWrite(4,LOW);
+    digitalWrite(5,LOW);
+
+  
   pixels.begin(); // INITIALIZE NeoPixel strip object (REQUIRED)
 
 }
@@ -218,16 +228,28 @@ void loop() {
     pixels.setPixelColor(0, pixels.Color(0, 0, 0));    
     pixels.setPixelColor(1, pixels.Color(0, 0, 0));    
     pixels.setPixelColor(2, pixels.Color(200, 0, 0));    
+    digitalWrite(4,LOW);
+    digitalWrite(5,LOW);
+    digitalWrite(3,HIGH);
+
   }
   if(mode == 2){
     pixels.setPixelColor(0, pixels.Color(0, 0, 0));    
     pixels.setPixelColor(1, pixels.Color(0, 200, 0));    
     pixels.setPixelColor(2, pixels.Color(0, 0, 0));    
+    digitalWrite(3,LOW);
+    digitalWrite(5,LOW);
+    digitalWrite(4,HIGH);
+ 
   }
   if(mode == 3){
     pixels.setPixelColor(0, pixels.Color(0, 0, 200));    
      pixels.setPixelColor(1, pixels.Color(0, 0, 0));    
     pixels.setPixelColor(2, pixels.Color(0, 0, 0));    
+    digitalWrite(4,LOW);
+    digitalWrite(3,LOW);
+    digitalWrite(5,HIGH);
+
    
   }
   pixels.show();   // Send the updated pixel colors to the hardware.

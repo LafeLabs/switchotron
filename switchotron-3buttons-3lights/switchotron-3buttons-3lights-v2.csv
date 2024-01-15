@@ -1,0 +1,18 @@
+"Part";"Value";"Device";"Package";"Description";"POPULARITY";"PROD_ID";"VALUE";
+"C1";"10uF";"10UF-0603-6.3V-20%";"0603";"10.0µF ceramic capacitors";"";"CAP-11015";"10uF";
+"C2";"10uF";"10UF-0603-6.3V-20%";"0603";"10.0µF ceramic capacitors";"";"CAP-11015";"10uF";
+"C3";"10uF";"10UF-0603-6.3V-20%";"0603";"10.0µF ceramic capacitors";"";"CAP-11015";"10uF";
+"H3";"MOUNT-HOLE3.2";"MOUNT-HOLE3.2";"3,2";"MOUNTING HOLE with drill center marker";"7";"";"";
+"H4";"MOUNT-HOLE3.2";"MOUNT-HOLE3.2";"3,2";"MOUNTING HOLE with drill center marker";"7";"";"";
+"J1";"";"CONN_05";"1X05";"Multi connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections";"";"";"";
+"J2";"";"CONN_05";"1X05";"Multi connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections";"";"";"";
+"J4";"";"CONN_02";"1X02";"Multi connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections";"";"";"";
+"LED1";"WS2812B5050-NARROW";"WS2812B5050-NARROW";"WS2812B-NARROW";"";"";"";"";
+"LED2";"WS2812B5050-NARROW";"WS2812B5050-NARROW";"WS2812B-NARROW";"";"";"";"";
+"LED3";"WS2812B5050-NARROW";"WS2812B5050-NARROW";"WS2812B-NARROW";"";"";"";"";
+"R1";"10k";"10KOHM-0603-1/10W-1%";"0603";"10kΩ resistor";"";"RES-00824";"10k";
+"R2";"10k";"10KOHM-0603-1/10W-1%";"0603";"10kΩ resistor";"";"RES-00824";"10k";
+"R3";"10k";"10KOHM-0603-1/10W-1%";"0603";"10kΩ resistor";"";"RES-00824";"10k";
+"U$1";"BUTTON";"BUTTON";"BUTTON";"";"";"";"";
+"U$4";"BUTTON";"BUTTON";"BUTTON";"";"";"";"";
+"U$5";"BUTTON";"BUTTON";"BUTTON";"";"";"";"";
