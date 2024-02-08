@@ -5,6 +5,7 @@
         "index.html",
         "readme.html",
         "readmeeditor.html",
+        "switches.html",
         "webeditor.html"
     ],
     "data": [
