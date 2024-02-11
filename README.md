@@ -2,6 +2,564 @@
 
 ### [localhost](http://localhost/)
 
+
+## 6 channel switch control code:
+
+```
+
+
+#include <Adafruit_NeoPixel.h>
+#ifdef __AVR__
+#endif
+
+// Which pin on the Arduino is connected to the NeoPixels?
+#define PIN        12 // On Trinket or Gemma, suggest changing this to 1
+
+// How many NeoPixels are attached to the Arduino?
+#define NUMPIXELS 6 // Popular NeoPixel ring size
+//there are 8 neopixels but this code is for 6 used along with 6 buttons
+
+// When setting up the NeoPixel library, we tell it how many pixels,  
+// and which pin to use to send signals. Note that for older NeoPixel
+// strips you might need to change the third parameter -- see the
+// strandtest example for more information on possible values.
+Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
+
+
+int analog = 0;
+int delta = 100;
+int mode = 1;//modes are 1,2,3,4,5, and 6 which are pixel 5,4,3,2,1, and 0 respectively
+
+void setup() {
+      Serial.begin(115200);
+
+  // These lines are specifically to support the Adafruit Trinket 5V 16 MHz.
+  // Any other board, you can remove this part (but no harm leaving it):
+#if defined(__AVR_ATtiny85__) && (F_CPU == 16000000)
+  clock_prescale_set(clock_div_1);
+#endif
+  // END of Trinket-specific code.
+
+    pinMode(3,OUTPUT);
+    pinMode(4,OUTPUT);
+    pinMode(5,OUTPUT);
+    pinMode(6,OUTPUT);
+    pinMode(7,OUTPUT);
+    pinMode(8,OUTPUT);
+
+    digitalWrite(3,LOW);
+    digitalWrite(4,LOW);
+    digitalWrite(5,LOW);
+    digitalWrite(6,LOW);
+    digitalWrite(7,LOW);
+    digitalWrite(8,LOW);
+
+  
+  pixels.begin(); // INITIALIZE NeoPixel strip object (REQUIRED)
+
+}
+
+void loop() {
+  pixels.clear(); // Set all pixel colors to 'off'
+  analog = analogRead(A0);
+  // The first NeoPixel in a strand is #0, second is 1, all the way up
+  // to the count of pixels minus one.
+  
+  if(analog > 1024 - delta){
+    delay(1);
+    analog = analogRead(A0);
+    if(analog > 1023 - delta){
+       mode = 1;      
+    }
+  }
+  if(analog > 781 - delta && analog < 781 + delta){
+    delay(5);
+    analog = analogRead(A0);
+    if(analog > 781 - delta && analog < 781 + delta){
+         mode = 2; 
+    }
+  }
+  if(analog > 593 - delta && analog < 593 + delta){
+     delay(5);
+     analog = analogRead(A0);
+
+    if(analog > 593 - delta && analog < 593 + delta){
+      mode = 3;    
+    }
+  }
+
+  if(analog > 436 - delta && analog < 436 + delta){
+     delay(1);
+     analog = analogRead(A0);
+
+    if(analog > 436 - delta && analog < 436 + delta){
+      mode = 4;    
+    }
+  }
+
+  if(analog > 296 - delta && analog < 296 + delta){
+     delay(1);
+     analog = analogRead(A0);
+
+    if(analog > 296 - delta && analog < 296 + delta){
+      mode = 5;    
+    }
+  }
+
+  if(analog > 154 - delta && analog < 154 + delta){
+     delay(1);
+     analog = analogRead(A0);
+
+    if(analog > 154 - delta && analog < 154 + delta){
+      mode = 6;    
+    }
+  }
+
+  if(mode == 1){
+    pixels.setPixelColor(0, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(1, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(2, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(3, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(4, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(5, pixels.Color(255, 0, 0));    
+
+    digitalWrite(3,HIGH);
+    digitalWrite(4,LOW);
+    digitalWrite(5,LOW);
+    digitalWrite(6,LOW);
+    digitalWrite(7,LOW);
+    digitalWrite(8,LOW);
+    
+  }
+  if(mode == 2){
+    pixels.setPixelColor(0, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(1, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(2, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(3, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(4, pixels.Color(255, 165, 0));    
+    pixels.setPixelColor(5, pixels.Color(0, 0, 0));    
+    digitalWrite(3,LOW);
+    digitalWrite(4,HIGH);
+    digitalWrite(5,LOW);
+    digitalWrite(6,LOW);
+    digitalWrite(7,LOW);
+    digitalWrite(8,LOW);
+ 
+  }
+  if(mode == 3){
+    pixels.setPixelColor(0, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(1, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(2, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(3, pixels.Color(255, 215, 0));    
+    pixels.setPixelColor(4, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(5, pixels.Color(0, 0, 0));    
+    digitalWrite(3,LOW);
+    digitalWrite(4,LOW);
+    digitalWrite(5,HIGH);
+    digitalWrite(6,LOW);
+    digitalWrite(7,LOW);
+    digitalWrite(8,LOW);
+  }
+  if(mode == 4){
+    pixels.setPixelColor(0, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(1, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(2, pixels.Color(0, 255, 0));    
+    pixels.setPixelColor(3, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(4, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(5, pixels.Color(0, 0, 0));    
+    digitalWrite(3,LOW);
+    digitalWrite(4,LOW);
+    digitalWrite(5,LOW);
+    digitalWrite(6,HIGH);
+    digitalWrite(7,LOW);
+    digitalWrite(8,LOW);
+  }
+  if(mode == 5){
+    pixels.setPixelColor(0, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(1, pixels.Color(0, 0, 255));    
+    pixels.setPixelColor(2, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(3, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(4, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(5, pixels.Color(0, 0, 0));    
+    digitalWrite(3,LOW);
+    digitalWrite(4,LOW);
+    digitalWrite(5,LOW);
+    digitalWrite(6,LOW);
+    digitalWrite(7,HIGH);
+    digitalWrite(8,LOW);
+  }
+  if(mode == 6){
+    pixels.setPixelColor(0, pixels.Color(200, 0, 200));    
+    pixels.setPixelColor(1, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(2, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(3, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(4, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(5, pixels.Color(0, 0, 0));    
+    digitalWrite(3,LOW);
+    digitalWrite(4,LOW);
+    digitalWrite(5,LOW);
+    digitalWrite(6,LOW);
+    digitalWrite(7,LOW);
+    digitalWrite(8,HIGH);
+  }
+  
+  pixels.show();   // Send the updated pixel colors to the hardware.
+  delay(1); // Pause before next pass through loop
+
+    Serial.println(analog);
+
+}
+```
+## 9 Channel Control Code:
+
+```
+
+
+#include <Adafruit_NeoPixel.h>
+#ifdef __AVR__
+#endif
+
+// Which pin on the Arduino is connected to the NeoPixels?
+#define PIN        12 // On Trinket or Gemma, suggest changing this to 1
+
+// How many NeoPixels are attached to the Arduino?
+#define NUMPIXELS 9 // 
+//there are 9
+
+// When setting up the NeoPixel library, we tell it how many pixels,  
+// and which pin to use to send signals. Note that for older NeoPixel
+// strips you might need to change the third parameter -- see the
+// strandtest example for more information on possible values.
+Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
+
+
+int analog = 0;
+int delta = 20;
+int mode = 1;//modes are 1,2,3,4,5,6,7,8,9 which are pixel 8,7,6,5,4,3,2,1, and 0 respectively
+
+#include <MozziGuts.h>
+#include <Oscil.h> // oscillator template
+#include <tables/sin2048_int8.h> // sine table for oscillator
+
+// use: Oscil <table_size, update_rate> oscilName (wavetable), look in .h file of table #included above
+Oscil <SIN2048_NUM_CELLS, AUDIO_RATE> aSin(SIN2048_DATA);
+
+// use #define for CONTROL_RATE, not a constant
+#define CONTROL_RATE 64 // Hz, powers of 2 are most reliable
+
+
+
+void setup() {
+      Serial.begin(115200);
+        startMozzi(CONTROL_RATE); // :)
+  aSin.setFreq(2600); // set the frequency 2600 HZ! HACK THE PLANET!
+    pinMode(9,OUTPUT); 
+
+
+  // These lines are specifically to support the Adafruit Trinket 5V 16 MHz.
+  // Any other board, you can remove this part (but no harm leaving it):
+#if defined(__AVR_ATtiny85__) && (F_CPU == 16000000)
+  clock_prescale_set(clock_div_1);
+#endif
+  // END of Trinket-specific code.
+
+    pinMode(3,OUTPUT);
+    pinMode(4,OUTPUT);
+    pinMode(5,OUTPUT);
+    pinMode(6,OUTPUT);
+    pinMode(7,OUTPUT);
+    pinMode(8,OUTPUT);
+
+    digitalWrite(3,LOW);
+    digitalWrite(4,LOW);
+    digitalWrite(5,LOW);
+    digitalWrite(6,LOW);
+    digitalWrite(7,LOW);
+    digitalWrite(8,LOW);
+
+  
+  pixels.begin(); // INITIALIZE NeoPixel strip object (REQUIRED)
+
+}
+
+
+void updateControl(){
+  // put changing controls in here
+}
+
+
+AudioOutput_t updateAudio(){
+  return MonoOutput::from8Bit(aSin.next()); // return an int signal centred around 0
+}
+
+
+void loop() {
+
+    
+
+  pixels.clear(); // Set all pixel colors to 'off'
+  analog = analogRead(A0);
+  // The first NeoPixel in a strand is #0, second is 1, all the way up
+  // to the count of pixels minus one.
+  
+  if(analog > 1024 - delta){
+    delay(1);
+    analog = analogRead(A0);
+    if(analog > 1023 - delta){
+       mode = 1;      
+    }
+  }
+  if(analog > 836 - delta && analog < 836 + delta){
+    delay(5);
+    analog = analogRead(A0);
+    if(analog > 836 - delta && analog < 836 + delta){
+         mode = 2; 
+    }
+  }
+  if(analog > 690 - delta && analog < 690 + delta){
+     delay(5);
+     analog = analogRead(A0);
+
+    if(analog > 690 - delta && analog < 690 + delta){
+      mode = 3;    
+    }
+  }
+
+  if(analog > 569 - delta && analog < 569 + delta){
+     delay(1);
+     analog = analogRead(A0);
+
+    if(analog > 569 - delta && analog < 569 + delta){
+      mode = 4;    
+    }
+  }
+
+  if(analog > 464 - delta && analog < 464 + delta){
+     delay(1);
+     analog = analogRead(A0);
+
+    if(analog > 464 - delta && analog < 464 + delta){
+      mode = 5;    
+    }
+  }
+
+  if(analog > 372 - delta && analog < 372 + delta){
+     delay(1);
+     analog = analogRead(A0);
+
+    if(analog > 372 - delta && analog < 372 + delta){
+      mode = 6;    
+    }
+  }
+
+  if(analog > 283 - delta && analog < 283 + delta){
+     delay(1);
+     analog = analogRead(A0);
+
+    if(analog > 283 - delta && analog < 283 + delta){
+      mode = 7;    
+    }
+  }
+
+  if(analog > 195 - delta && analog < 195 + delta){
+     delay(1);
+     analog = analogRead(A0);
+
+    if(analog > 195 - delta && analog < 195 + delta){
+      mode = 8;    
+    }
+  }
+
+  if(analog > 103 - delta && analog < 103 + delta){
+     delay(1);
+     analog = analogRead(A0);
+
+    if(analog > 103 - delta && analog < 103 + delta){
+      mode = 9;    
+    }
+  }
+
+
+  if(mode == 1){
+    pixels.setPixelColor(0, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(1, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(2, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(3, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(4, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(5, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(6, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(7, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(8, pixels.Color(255, 0, 0));    
+    digitalWrite(3,HIGH);
+    digitalWrite(4,LOW);
+    digitalWrite(5,LOW);
+    digitalWrite(6,HIGH);
+    digitalWrite(7,LOW);
+    digitalWrite(8,LOW);
+
+    
+  }
+  if(mode == 2){
+    pixels.setPixelColor(0, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(1, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(2, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(3, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(4, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(5, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(6, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(7, pixels.Color(255, 0, 0));    
+    pixels.setPixelColor(8, pixels.Color(0, 0, 0));    
+    digitalWrite(3,HIGH);
+    digitalWrite(4,LOW);
+    digitalWrite(5,LOW);
+    digitalWrite(6,LOW);
+    digitalWrite(7,HIGH);
+    digitalWrite(8,LOW);
+
+ 
+  }
+  if(mode == 3){
+    pixels.setPixelColor(0, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(1, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(2, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(3, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(4, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(5, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(6, pixels.Color(255, 0, 0));    
+    pixels.setPixelColor(7, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(8, pixels.Color(0, 0, 0));    
+    digitalWrite(3,HIGH);
+    digitalWrite(4,LOW);
+    digitalWrite(5,LOW);
+    digitalWrite(6,LOW);
+    digitalWrite(7,LOW);
+    digitalWrite(8,HIGH);
+
+  }
+  if(mode == 4){
+    pixels.setPixelColor(0, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(1, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(2, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(3, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(4, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(5, pixels.Color(255, 0, 0));    
+    pixels.setPixelColor(6, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(7, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(8, pixels.Color(0, 0, 0));    
+    digitalWrite(3,LOW);
+    digitalWrite(4,HIGH);
+    digitalWrite(5,LOW);
+    digitalWrite(6,HIGH);
+    digitalWrite(7,LOW);
+    digitalWrite(8,LOW);
+
+  }
+  if(mode == 5){
+    pixels.setPixelColor(0, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(1, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(2, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(3, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(4, pixels.Color(255, 0, 0));    
+    pixels.setPixelColor(5, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(6, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(7, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(8, pixels.Color(0, 0, 0));    
+    digitalWrite(3,LOW);
+    digitalWrite(4,HIGH);
+    digitalWrite(5,LOW);
+    digitalWrite(6,LOW);
+    digitalWrite(7,HIGH);
+    digitalWrite(8,LOW);
+
+  }
+  if(mode == 6){
+    pixels.setPixelColor(0, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(1, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(2, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(3, pixels.Color(255, 0, 0));    
+    pixels.setPixelColor(4, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(5, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(6, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(7, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(8, pixels.Color(0, 0, 0));    
+    digitalWrite(3,LOW);
+    digitalWrite(4,HIGH);
+    digitalWrite(5,LOW);
+    digitalWrite(6,LOW);
+    digitalWrite(7,LOW);
+    digitalWrite(8,HIGH);
+
+  }
+
+  if(mode == 7){
+    pixels.setPixelColor(0, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(1, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(2, pixels.Color(255, 0, 0));    
+    pixels.setPixelColor(3, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(4, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(5, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(6, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(7, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(8, pixels.Color(0, 0, 0));    
+    digitalWrite(3,LOW);
+    digitalWrite(4,LOW);
+    digitalWrite(5,HIGH);
+    digitalWrite(6,HIGH);
+    digitalWrite(7,LOW);
+    digitalWrite(8,LOW);
+
+ 
+ }
+  if(mode == 8){
+    pixels.setPixelColor(0, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(1, pixels.Color(255, 0, 0));    
+    pixels.setPixelColor(2, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(3, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(4, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(5, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(6, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(7, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(8, pixels.Color(0, 0, 0));    
+    digitalWrite(3,LOW);
+    digitalWrite(4,LOW);
+    digitalWrite(5,HIGH);
+    digitalWrite(6,LOW);
+    digitalWrite(7,HIGH);
+    digitalWrite(8,LOW);
+
+  }
+  if(mode == 9){
+    pixels.setPixelColor(0, pixels.Color(255, 0, 0));    
+    pixels.setPixelColor(1, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(2, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(3, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(4, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(5, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(6, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(7, pixels.Color(0, 0, 0));    
+    pixels.setPixelColor(8, pixels.Color(0, 0, 0));    
+    digitalWrite(3,LOW);
+    digitalWrite(4,LOW);
+    digitalWrite(5,HIGH);
+    digitalWrite(6,LOW);
+    digitalWrite(7,LOW);
+    digitalWrite(8,HIGH);
+
+  
+  }
+
+  
+  pixels.show();   // Send the updated pixel colors to the hardware.
+  delay(1); // Pause before next pass through loop
+
+  aSin.setFreq(666 + 420*(mode));  
+  audioHook(); // required here
+
+    Serial.println(analog);
+
+}
+```
+
 The switch as sign, using GEOMETRON.
 
 ![qr code pointing to github repository](https://raw.githubusercontent.com/LafeLabs/switchotron/main/qrcode.png)
