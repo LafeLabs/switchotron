@@ -3,6 +3,8 @@
 ### [localhost](http://localhost/)
 
 
+
+
 ## 6 channel switch control code:
 
 ```
@@ -31,7 +33,7 @@ int delta = 100;
 int mode = 1;//modes are 1,2,3,4,5, and 6 which are pixel 5,4,3,2,1, and 0 respectively
 
 void setup() {
-      Serial.begin(115200);
+   Serial.begin(115200);
 
   // These lines are specifically to support the Adafruit Trinket 5V 16 MHz.
   // Any other board, you can remove this part (but no harm leaving it):
@@ -114,6 +116,35 @@ void loop() {
       mode = 6;    
     }
   }
+
+  if (Serial.available()) {
+
+    //for more info on this code see http://adam-meyer.com/arduino/arduino-serial
+    //read serial as ascii integer
+        int ser = Serial.read();
+    //    Serial.println(ser);
+     if(ser == 49){    //ASCII for 1
+      mode = 1;
+     }
+     if(ser == 50){    //ASCII for 2
+      mode = 2;
+     }
+     if(ser == 51){    //ASCII for 3
+      mode = 3;
+     }
+     if(ser == 52){    //ASCII for 4
+      mode = 4;
+     }
+     if(ser == 53){    //ASCII for 5
+      mode = 5;
+     }
+     if(ser == 54){    //ASCII for 6
+      mode = 6;
+     }
+
+
+  }
+
 
   if(mode == 1){
     pixels.setPixelColor(0, pixels.Color(0, 0, 0));    
@@ -237,23 +268,9 @@ int analog = 0;
 int delta = 20;
 int mode = 1;//modes are 1,2,3,4,5,6,7,8,9 which are pixel 8,7,6,5,4,3,2,1, and 0 respectively
 
-#include <MozziGuts.h>
-#include <Oscil.h> // oscillator template
-#include <tables/sin2048_int8.h> // sine table for oscillator
-
-// use: Oscil <table_size, update_rate> oscilName (wavetable), look in .h file of table #included above
-Oscil <SIN2048_NUM_CELLS, AUDIO_RATE> aSin(SIN2048_DATA);
-
-// use #define for CONTROL_RATE, not a constant
-#define CONTROL_RATE 64 // Hz, powers of 2 are most reliable
-
-
 
 void setup() {
-      Serial.begin(115200);
-        startMozzi(CONTROL_RATE); // :)
-  aSin.setFreq(2600); // set the frequency 2600 HZ! HACK THE PLANET!
-    pinMode(9,OUTPUT); 
+    Serial.begin(115200);
 
 
   // These lines are specifically to support the Adafruit Trinket 5V 16 MHz.
@@ -283,14 +300,7 @@ void setup() {
 }
 
 
-void updateControl(){
-  // put changing controls in here
-}
 
-
-AudioOutput_t updateAudio(){
-  return MonoOutput::from8Bit(aSin.next()); // return an int signal centred around 0
-}
 
 
 void loop() {
@@ -379,6 +389,42 @@ void loop() {
     }
   }
 
+  if (Serial.available()) {
+
+    //for more info on this code see http://adam-meyer.com/arduino/arduino-serial
+    //read serial as ascii integer
+     int ser = Serial.read();
+    //    Serial.println(ser);
+     if(ser == 49){    //ASCII for 1
+      mode = 1;
+     }
+     if(ser == 50){    //ASCII for 2
+      mode = 2;
+     }
+     if(ser == 51){    //ASCII for 3
+      mode = 3;
+     }
+     if(ser == 52){    //ASCII for 4
+      mode = 4;
+     }
+     if(ser == 53){    //ASCII for 5
+      mode = 5;
+     }
+     if(ser == 54){    //ASCII for 6
+      mode = 6;
+     }
+     if(ser == 55){    //ASCII for 4
+      mode = 7;
+     }
+     if(ser == 56){    //ASCII for 5
+      mode = 8;
+     }
+     if(ser == 57){    //ASCII for 6
+      mode = 9;
+     }
+
+
+  }
 
   if(mode == 1){
     pixels.setPixelColor(0, pixels.Color(0, 0, 0));    
@@ -552,12 +598,10 @@ void loop() {
   pixels.show();   // Send the updated pixel colors to the hardware.
   delay(1); // Pause before next pass through loop
 
-  aSin.setFreq(666 + 420*(mode));  
-  audioHook(); // required here
-
-    Serial.println(analog);
+//    Serial.println(analog);
 
 }
+
 ```
 
 The switch as sign, using GEOMETRON.
